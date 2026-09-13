@@ -7863,3 +7863,80 @@ input[placeholder^="Search"]{
     padding-bottom:2px!important;
   }
 }
+
+
+/* v1.33 — true full-screen installed iPhone PWA --------------------------
+   Earlier PWA foundation rules padded BODY by the iOS safe areas, while the
+   phone shell/nav also handled those same insets. That double-reserved the
+   top and bottom and made the app look letterboxed. On installed iPhones,
+   remove safe-area padding from the document itself and let the app shell
+   own the top inset while the fixed nav owns the bottom inset. */
+@media (display-mode:standalone) and (max-width:520px) and (hover:none) and (pointer:coarse){
+  html,
+  body,
+  #root{
+    width:100%!important;
+    height:100dvh!important;
+    min-height:100dvh!important;
+    max-height:100dvh!important;
+    margin:0!important;
+    padding:0!important;
+    overflow:hidden!important;
+    background:#080e18!important;
+  }
+
+  body{
+    position:fixed!important;
+    inset:0!important;
+  }
+
+  #root{
+    position:relative!important;
+  }
+
+  /* One—and only one—top safe-area reservation. This places the Battle
+     controls immediately beneath the iOS time / signal / battery bar. */
+  .appShell,
+  .appShell.battleShell{
+    width:100%!important;
+    height:100dvh!important;
+    min-height:100dvh!important;
+    max-height:100dvh!important;
+    padding-top:max(0px,calc(env(safe-area-inset-top) - 2px))!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    padding-bottom:calc(46px + env(safe-area-inset-bottom))!important;
+    margin:0!important;
+    overflow:hidden!important;
+    box-sizing:border-box!important;
+  }
+
+  .battleShell .battlePage{
+    height:100%!important;
+    min-height:0!important;
+    max-height:100%!important;
+    margin:0!important;
+    padding:0 4px 2px!important;
+  }
+
+  .battleShell .battleToolbar{
+    margin:0!important;
+    padding-top:0!important;
+  }
+
+  /* The NAV background reaches the physical bottom edge. Only its internal
+     button row is kept clear of the home indicator. */
+  .appBottomNav{
+    position:fixed!important;
+    left:0!important;
+    right:0!important;
+    bottom:0!important;
+    width:100%!important;
+    height:calc(46px + env(safe-area-inset-bottom))!important;
+    min-height:calc(46px + env(safe-area-inset-bottom))!important;
+    margin:0!important;
+    padding:3px 5px env(safe-area-inset-bottom) 5px!important;
+    box-sizing:border-box!important;
+    background:#080e18!important;
+  }
+}
