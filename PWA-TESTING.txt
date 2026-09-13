@@ -1,0 +1,36 @@
+BATTLE FRONTIER COMPANION — v1.0 PWA PROTOTYPE
+
+WHAT CHANGED
+- Keeps the v0.50 Battle UI and data.
+- Adds a web app manifest and app icons.
+- Adds standalone display support for iPhone/Mac installation.
+- Adds a production service worker for offline use.
+- Pre-caches all 772 Emerald normal/shiny sprites plus the built app assets.
+- Keeps My Pokémon and Teams in the same localStorage keys as v0.50.
+- Adds iPhone safe-area handling when launched as an installed web app.
+
+LOCAL DEVELOPMENT
+1. npm install   (only if this folder has no node_modules)
+2. npm run dev
+3. Open the localhost URL Vite gives you.
+
+IMPORTANT: npm run dev intentionally does NOT register the service worker.
+This prevents stale cached files while we are actively editing the app.
+
+FULL PWA / OFFLINE TEST ON MAC
+1. npm run build
+2. npm run preview
+3. Open the preview URL in your browser.
+4. Reload once and give the service worker a few seconds to cache the app/sprites.
+5. Test offline after the service worker has finished installing.
+
+IPHONE INSTALL TEST
+1. Push/deploy this version to GitHub Pages over HTTPS.
+2. Open the GitHub Pages site in Safari on iPhone.
+3. Share -> Add to Home Screen -> Open as Web App -> Add.
+4. Launch it from the Home Screen once while online.
+5. After it has loaded, use Airplane Mode and reopen it to test offline behavior.
+
+DATA SAFETY
+- App updates do not intentionally clear My Pokémon or Teams.
+- Keep using Export Backup for your trained collection/teams.

@@ -1,0 +1,70 @@
+[
+  {
+    "Number": "Cheri Berry",
+    "Name": "Heals Paralysis"
+  },
+  {
+    "Number": "Chesto Berry",
+    "Name": "Heals Sleeping"
+  },
+  {
+    "Number": "Pecha Berry",
+    "Name": "Heals Poison"
+  },
+  {
+    "Number": "Rawst Berry",
+    "Name": "Heals Burn"
+  },
+  {
+    "Number": "Aspear Berry",
+    "Name": "Heals Frozen Status"
+  },
+  {
+    "Number": "Leppa Berry",
+    "Name": "Recovers 10PP to an attack"
+  },
+  {
+    "Number": "Oran Berry",
+    "Name": "Recovers 10HP"
+  },
+  {
+    "Number": "Persim Berry",
+    "Name": "Heals Confusion"
+  },
+  {
+    "Number": "Lum Berry",
+    "Name": "Heals Any Status Condition"
+  },
+  {
+    "Number": "Sitrus Berry",
+    "Name": "Recovers 30HP"
+  },
+  {
+    "Number": "Liechi Berry",
+    "Name": "Raises Attack when HP is below 1/3"
+  },
+  {
+    "Number": "Ganlon Berry",
+    "Name": "Raises Defense when HP is below 1/3"
+  },
+  {
+    "Number": "Salac Berry",
+    "Name": "Raises Speed when HP is below 1/3"
+  },
+  {
+    "Number": "Petaya Berry",
+    "Name": "Raises Special Attack when HP is below 1/3"
+  },
+  {
+    "Number": "Apicot Berry",
+    "Name": "Raises Special Defense when HP is below 1/3"
+  },
+  {
+    "Number": "Lansat Berry",
+    "Name": "Raises Critical Hit Ratio when HP is below 1/3"
+  },
+  {
+    "Number": "Starf Berry",
+    "Name": "Raises Any Stat when HP is below 1/3"
+  }
+]

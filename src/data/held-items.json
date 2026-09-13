@@ -1,0 +1,150 @@
+[
+  {
+    "Name": "Black Belt",
+    "Effect": "Any Fighting Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "BlackGlasses",
+    "Effect": "Any Dark Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Brightpowder",
+    "Effect": "Lowers Opponent's Accuracy"
+  },
+  {
+    "Name": "Charcoal",
+    "Effect": "Any Fire Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Choice Band",
+    "Effect": "Multiplies 1st Move Power by 1.5 if Physical"
+  },
+  {
+    "Name": "DeepSeaScale",
+    "Effect": "Clamperl's Special Defense increases by 100%. Evolves Clamperl to Gorebyss"
+  },
+  {
+    "Name": "DeepSeaTooth",
+    "Effect": "Clamperl's Special Attack increases by 100%. Evolves Clamperl to Huntail"
+  },
+  {
+    "Name": "Dragon Fang",
+    "Effect": "Any Dragon Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Focus Band",
+    "Effect": "May prevent fainting"
+  },
+  {
+    "Name": "Hard Stone",
+    "Effect": "Any Rock Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "King's Rock",
+    "Effect": "May cause Opponent to Flinch. Used to evolve Poliwhirl and Slowpoke"
+  },
+  {
+    "Name": "Lax Incense",
+    "Effect": "Enemy's Accuracy is lowered by 5%. Attach to Female Wobbuffet and breed to get Wynaut"
+  },
+  {
+    "Name": "Leftovers",
+    "Effect": "HP Increases by 1/16th each turn"
+  },
+  {
+    "Name": "Light Ball",
+    "Effect": "Pikachu's Special Attack increases by 100%"
+  },
+  {
+    "Name": "Lucky Punch",
+    "Effect": "If attached to Chansey, Critical Hit Ratio Rises"
+  },
+  {
+    "Name": "Magnet",
+    "Effect": "Any Electric Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Mental Herb",
+    "Effect": "Prevents Attraction"
+  },
+  {
+    "Name": "Metal Coat",
+    "Effect": "Any Steel Type Move's Power is increased by 10%. Evolves Onix & Scyther when traded"
+  },
+  {
+    "Name": "Metal Powder",
+    "Effect": "If attached to Ditto, Ditto's Defense & Special Defense is Raised by 50%"
+  },
+  {
+    "Name": "Miracle Seed",
+    "Effect": "Any Grass Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Mystic Water",
+    "Effect": "Any Water Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "NeverMeltIce",
+    "Effect": "Any Ice Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Poison Barb",
+    "Effect": "Any Poison Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Quick Claw",
+    "Effect": "The Pokémon holding this may attack first"
+  },
+  {
+    "Name": "Scope Lens",
+    "Effect": "Increases Chances of a Critical Hit"
+  },
+  {
+    "Name": "Sea Incense",
+    "Effect": "Any Water Type Move's Power is increased by 5%. Attach to Female Marill and breed to get Azurill"
+  },
+  {
+    "Name": "Sharp Beak",
+    "Effect": "Any Flying Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Shell Bell",
+    "Effect": "Raises HP by 1/8th of the damage inflicted onto the Opponent"
+  },
+  {
+    "Name": "Silk Scarf",
+    "Effect": "Any Normal Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Silverpowder",
+    "Effect": "Any Bug Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Soft Sand",
+    "Effect": "Any Ground Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Soul Dew",
+    "Effect": "Raises Latios' Special Defense by 50%. Raises Latias' Special Attack by 50%."
+  },
+  {
+    "Name": "Spell Tag",
+    "Effect": "Any Ghost Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "Stick",
+    "Effect": "If attached to Farfetch'd, Critical Hit Ratio Rises"
+  },
+  {
+    "Name": "Thick Club",
+    "Effect": "If attached to Cubone or Marowak, their Attack rises by 100%"
+  },
+  {
+    "Name": "TwistedSpoon",
+    "Effect": "Any Psychic Type Move's Power is increased by 10%"
+  },
+  {
+    "Name": "White Herb",
+    "Effect": "Cures any Status Condition"
+  }
+]

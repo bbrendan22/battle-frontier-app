@@ -1,0 +1,70 @@
+[
+  {
+    "Type": "Normal",
+    "Gen 3 Damage Category": "Physical"
+  },
+  {
+    "Type": "Fire",
+    "Gen 3 Damage Category": "Special"
+  },
+  {
+    "Type": "Water",
+    "Gen 3 Damage Category": "Special"
+  },
+  {
+    "Type": "Electric",
+    "Gen 3 Damage Category": "Special"
+  },
+  {
+    "Type": "Grass",
+    "Gen 3 Damage Category": "Special"
+  },
+  {
+    "Type": "Ice",
+    "Gen 3 Damage Category": "Special"
+  },
+  {
+    "Type": "Fighting",
+    "Gen 3 Damage Category": "Physical"
+  },
+  {
+    "Type": "Poison",
+    "Gen 3 Damage Category": "Physical"
+  },
+  {
+    "Type": "Ground",
+    "Gen 3 Damage Category": "Physical"
+  },
+  {
+    "Type": "Flying",
+    "Gen 3 Damage Category": "Physical"
+  },
+  {
+    "Type": "Psychic",
+    "Gen 3 Damage Category": "Special"
+  },
+  {
+    "Type": "Bug",
+    "Gen 3 Damage Category": "Physical"
+  },
+  {
+    "Type": "Rock",
+    "Gen 3 Damage Category": "Physical"
+  },
+  {
+    "Type": "Ghost",
+    "Gen 3 Damage Category": "Physical"
+  },
+  {
+    "Type": "Dragon",
+    "Gen 3 Damage Category": "Special"
+  },
+  {
+    "Type": "Dark",
+    "Gen 3 Damage Category": "Special"
+  },
+  {
+    "Type": "Steel",
+    "Gen 3 Damage Category": "Physical"
+  }
+]

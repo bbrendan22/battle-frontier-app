@@ -1,0 +1,27 @@
+BATTLE FRONTIER APP — FIRST GITHUB PAGES SETUP
+
+1. Upload the CONTENTS of this folder to the root of your existing GitHub repository.
+   Important: package.json, src, public, vite.config.js, and .github must be at the repository root.
+
+2. In GitHub, open the repository and go to:
+   Settings > Pages
+
+3. Under "Build and deployment", set Source to:
+   GitHub Actions
+
+4. Go to the Actions tab.
+   The workflow named "Deploy Battle Frontier App to GitHub Pages" should run automatically after the files are committed to main.
+
+5. When the workflow finishes successfully, return to Settings > Pages.
+   GitHub will show the permanent site address.
+
+NORMAL USE AFTER SETUP
+- You do NOT need Terminal to use the published app.
+- Open the GitHub Pages URL in Safari/Chrome on your Mac or phone.
+- Bookmark it or add it to your Home Screen.
+
+IMPORTANT ABOUT YOUR POKEMON DATA
+- The current app saves your created Pokemon in the browser's local storage.
+- Your Mac and phone therefore have separate collections for now.
+- Clearing site/browser data can erase that device's saved collection.
+- Export/import and sync can be added in a future build.

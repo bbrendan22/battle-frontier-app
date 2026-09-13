@@ -1,0 +1,16 @@
+{
+  "name": "Battle Frontier Companion",
+  "short_name": "Frontier",
+  "description": "Offline-ready Pokémon Emerald Battle Frontier companion.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080e18",
+  "theme_color": "#101b2c",
+  "icons": [
+    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"./icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}

@@ -1,0 +1,177 @@
+[
+  {
+    "Nature": "Hardy",
+    "Increased Stat": "—",
+    "Decreased Stat": "—",
+    "Boost Multiplier": 1,
+    "Drop Multiplier": 1
+  },
+  {
+    "Nature": "Lonely",
+    "Increased Stat": "Attack",
+    "Decreased Stat": "Defense",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Brave",
+    "Increased Stat": "Attack",
+    "Decreased Stat": "Speed",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Adamant",
+    "Increased Stat": "Attack",
+    "Decreased Stat": "Sp. Atk",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Naughty",
+    "Increased Stat": "Attack",
+    "Decreased Stat": "Sp. Def",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Bold",
+    "Increased Stat": "Defense",
+    "Decreased Stat": "Attack",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Docile",
+    "Increased Stat": "—",
+    "Decreased Stat": "—",
+    "Boost Multiplier": 1,
+    "Drop Multiplier": 1
+  },
+  {
+    "Nature": "Relaxed",
+    "Increased Stat": "Defense",
+    "Decreased Stat": "Speed",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Impish",
+    "Increased Stat": "Defense",
+    "Decreased Stat": "Sp. Atk",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Lax",
+    "Increased Stat": "Defense",
+    "Decreased Stat": "Sp. Def",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Timid",
+    "Increased Stat": "Speed",
+    "Decreased Stat": "Attack",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Hasty",
+    "Increased Stat": "Speed",
+    "Decreased Stat": "Defense",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Serious",
+    "Increased Stat": "—",
+    "Decreased Stat": "—",
+    "Boost Multiplier": 1,
+    "Drop Multiplier": 1
+  },
+  {
+    "Nature": "Jolly",
+    "Increased Stat": "Speed",
+    "Decreased Stat": "Sp. Atk",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Naive",
+    "Increased Stat": "Speed",
+    "Decreased Stat": "Sp. Def",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Modest",
+    "Increased Stat": "Sp. Atk",
+    "Decreased Stat": "Attack",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Mild",
+    "Increased Stat": "Sp. Atk",
+    "Decreased Stat": "Defense",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Quiet",
+    "Increased Stat": "Sp. Atk",
+    "Decreased Stat": "Speed",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Bashful",
+    "Increased Stat": "—",
+    "Decreased Stat": "—",
+    "Boost Multiplier": 1,
+    "Drop Multiplier": 1
+  },
+  {
+    "Nature": "Rash",
+    "Increased Stat": "Sp. Atk",
+    "Decreased Stat": "Sp. Def",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Calm",
+    "Increased Stat": "Sp. Def",
+    "Decreased Stat": "Attack",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Gentle",
+    "Increased Stat": "Sp. Def",
+    "Decreased Stat": "Defense",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Sassy",
+    "Increased Stat": "Sp. Def",
+    "Decreased Stat": "Speed",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Careful",
+    "Increased Stat": "Sp. Def",
+    "Decreased Stat": "Sp. Atk",
+    "Boost Multiplier": 1.1,
+    "Drop Multiplier": 0.9
+  },
+  {
+    "Nature": "Quirky",
+    "Increased Stat": "—",
+    "Decreased Stat": "—",
+    "Boost Multiplier": 1,
+    "Drop Multiplier": 1
+  }
+]
