@@ -7995,79 +7995,146 @@ input[placeholder^="Search"]{
 }
 
 
-/* v1.37 — phone nav is a viewport sibling, not a child of page content -------
-   AppNav is rendered outside .appShell so no Battle/My Pokemon/Extras layout,
-   reflow, grid, height, or transform can establish its positioning context.
-   On installed iPhone PWAs it is fixed directly to the viewport bottom. */
+/* v1.38 — stable phone Battle geometry ----------------------------------
+   Leave the current iPhone nav placement/appearance alone. Instead, lock the
+   Battle workspace tracks so matchup content cannot change the page height,
+   and return both Pokémon pickers to a dense ten-row viewport. */
 @media (display-mode:standalone) and (max-width:520px) and (hover:none) and (pointer:coarse){
-  html,body,#root{
-    width:100%!important;
-    height:100%!important;
-    min-height:100%!important;
-    margin:0!important;
-    padding:0!important;
-    overflow:hidden!important;
-  }
-
-  #root{
-    position:fixed!important;
-    inset:0!important;
-  }
-
-  .appShell,
-  .appShell.battleShell{
-    width:100%!important;
+  /* The team strip is a known, fixed-height lane. Current Matchup owns the
+     remainder and is not allowed to grow/shrink based on empty vs filled cards. */
+  .battleDesktopLayout{
     height:100%!important;
     min-height:0!important;
     max-height:100%!important;
-    margin:0!important;
-    padding-top:max(0px,calc(env(safe-area-inset-top) - 2px))!important;
-    padding-right:0!important;
-    padding-bottom:46px!important;
-    padding-left:0!important;
-    box-sizing:border-box!important;
-    overflow:hidden!important;
-  }
-
-  #root > .appBottomNav{
-    position:fixed!important;
-    top:auto!important;
-    right:0!important;
-    bottom:0!important;
-    left:0!important;
-    width:100%!important;
-    height:46px!important;
-    min-height:46px!important;
-    max-height:46px!important;
-    margin:0!important;
-    padding:3px 5px!important;
     display:grid!important;
-    grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    align-items:stretch!important;
+    grid-template-rows:103px minmax(0,1fr)!important;
     gap:4px!important;
-    box-sizing:border-box!important;
-    z-index:2147483647!important;
-    transform:none!important;
-    -webkit-transform:none!important;
-    background:#080e18!important;
+    overflow:hidden!important;
   }
-
-  #root > .appBottomNav button{
-    width:100%!important;
-    height:40px!important;
-    min-height:40px!important;
-    max-height:40px!important;
-    margin:0!important;
-    padding:2px 4px!important;
-    align-self:end!important;
+  .battleSelectionColumn{
+    height:103px!important;
+    min-height:103px!important;
+    max-height:103px!important;
+    overflow:visible!important;
   }
-
-  .battleShell .battlePage{
-    width:100%!important;
+  .battleSelectionColumn .battleSelectionGrid.compactBattleBuild{
+    height:103px!important;
+    min-height:103px!important;
+    max-height:103px!important;
+    overflow:visible!important;
+  }
+  .battleMatchupColumn{
     height:100%!important;
     min-height:0!important;
     max-height:100%!important;
-    margin:0!important;
+    align-self:stretch!important;
     overflow:hidden!important;
+    contain:layout size!important;
+  }
+  .battleMatchupColumn .battleMatchup{
+    height:100%!important;
+    min-height:0!important;
+    max-height:100%!important;
+    overflow:hidden!important;
+  }
+  .battleMatchupColumn .matchupCards{
+    height:100%!important;
+    min-height:0!important;
+    max-height:100%!important;
+    overflow:hidden!important;
+  }
+
+  /* Ten-result phone search density. The previous 55px rows only exposed a
+     little over eight entries. 43px rows retain the Dock layout structure
+     while fitting ten complete rows in the same overlay height. */
+  .slotPokemonPicker .opponentSetList.limitedOpponentList,
+  .manualPokemonPicker .manualPokemonList{
+    gap:1px!important;
+    padding-top:0!important;
+    padding-bottom:0!important;
+    overflow-y:auto!important;
+    overscroll-behavior:contain!important;
+    scrollbar-width:none!important;
+  }
+  .slotPokemonPicker .opponentSetList.limitedOpponentList::-webkit-scrollbar,
+  .manualPokemonPicker .manualPokemonList::-webkit-scrollbar{display:none!important}
+
+  .slotPokemonPicker .opponentSetRow,
+  .manualPokemonPicker .manualPokemonRow{
+    flex:0 0 43px!important;
+    height:43px!important;
+    min-height:43px!important;
+    max-height:43px!important;
+    grid-template-columns:31px minmax(0,1fr)!important;
+    grid-template-areas:'sprite ident' 'sprite moves' 'stats stats'!important;
+    grid-template-rows:11px 14px 10px!important;
+    column-gap:5px!important;
+    row-gap:1px!important;
+    padding:3px 5px!important;
+    box-sizing:border-box!important;
+  }
+  .slotPokemonPicker .opponentSetRow>img,
+  .manualPokemonPicker .manualPokemonRow>img{
+    width:30px!important;
+    height:30px!important;
+    align-self:start!important;
+  }
+  .slotPokemonPicker .oppSetIdentity,
+  .manualPokemonPicker .oppSetIdentity{
+    height:11px!important;
+    line-height:11px!important;
+  }
+  .slotPokemonPicker .oppSetIdentity>b,
+  .manualPokemonPicker .oppSetIdentity>b{
+    font-size:9.4px!important;
+    line-height:11px!important;
+  }
+  .slotPokemonPicker .oppInlineItem,
+  .manualPokemonPicker .manualInlineItem{
+    font-size:6.9px!important;
+    line-height:11px!important;
+  }
+  .slotPokemonPicker .oppSetMoves,
+  .manualPokemonPicker .manualOwnedMoves{
+    height:14px!important;
+    gap:2px!important;
+  }
+  .slotPokemonPicker .oppSetMoves span,
+  .slotPokemonPicker .oppSetMoves .fitText,
+  .slotPokemonPicker .oppSetMoves .fitTextM,
+  .slotPokemonPicker .oppSetMoves .fitTextL,
+  .slotPokemonPicker .oppSetMoves .fitTextXL,
+  .manualPokemonPicker .manualOwnedMoves span,
+  .manualPokemonPicker .manualOwnedMoves .fitText,
+  .manualPokemonPicker .manualOwnedMoves .fitTextM,
+  .manualPokemonPicker .manualOwnedMoves .fitTextL,
+  .manualPokemonPicker .manualOwnedMoves .fitTextXL{
+    height:14px!important;
+    min-height:14px!important;
+    padding:0 2px!important;
+    line-height:13px!important;
+    font-size:6.7px!important;
+  }
+  .slotPokemonPicker .oppSetMoves .fitTextM,
+  .manualPokemonPicker .manualOwnedMoves .fitTextM{font-size:6.2px!important}
+  .slotPokemonPicker .oppSetMoves .fitTextL,
+  .manualPokemonPicker .manualOwnedMoves .fitTextL{font-size:5.8px!important}
+  .slotPokemonPicker .oppSetMoves .fitTextXL,
+  .manualPokemonPicker .manualOwnedMoves .fitTextXL{font-size:5.3px!important}
+  .slotPokemonPicker .oppSetStats,
+  .manualPokemonPicker .oppSetStats{
+    height:10px!important;
+    line-height:10px!important;
+    padding:0 1px!important;
+  }
+  .slotPokemonPicker .oppSetStats span,
+  .manualPokemonPicker .oppSetStats span{
+    font-size:6.1px!important;
+    line-height:10px!important;
+  }
+  .slotPokemonPicker .oppSetStats b,
+  .manualPokemonPicker .oppSetStats b{
+    font-size:6.9px!important;
+    line-height:10px!important;
   }
 }

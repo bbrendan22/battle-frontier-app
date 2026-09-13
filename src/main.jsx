@@ -1097,7 +1097,7 @@ function BattlePage({collection,teams,onHome}){
        <section className="battleMatchup"><div className="matchupTitle"><h2>Current Matchup</h2></div><div className="matchupCards">{(()=>{const myLevel=Number(myMatch?.level)||50;const myStats=myMatch?calcStats({...myMatch,level:myLevel},master.get(Number(myMatch.dex))):null;const oppStats=oppMatch?calcFrontierSetStats(oppMatch,level,oppMatch.effectiveIV):null;const mySpe=Number(myStats?.Spe??myStats?.[5]??0);const oppSpe=Number(oppStats?.[5]??0);return <><BattleMatchCard record={myMatch} level={level} label="YOUR POKÉMON" isFaster={!!myMatch&&!!oppMatch&&mySpe>oppSpe}/><div className="versusBadge">VS</div><BattleMatchCard record={oppMatch} opponent level={level} label="OPPONENT POKÉMON" isFaster={!!myMatch&&!!oppMatch&&oppSpe>mySpe}/></>})()}</div></section>
      </div>
    </section>
-   <footer>v1.25 Frontier Sets · Offline-ready PWA</footer>
+   <footer>v1.38 Phone Battle · Offline-ready PWA</footer>
  </main>;
 }
 
@@ -1165,6 +1165,7 @@ function App(){
  useEffect(()=>{try{localStorage.setItem(TEAMS_STORAGE_KEY,JSON.stringify(teams));}catch(e){console.warn('Could not save teams',e)}},[teams]);
  useEffect(()=>{try{localStorage.setItem(STREAKS_STORAGE_KEY,JSON.stringify(topStreaks));}catch(e){console.warn('Could not save top streaks',e)}},[topStreaks]);
 
+
  const types=[...new Set(pokemon.flatMap(p=>[p['Type 1'],p['Type 2']]).filter(validValue))].sort();
  const list=useMemo(()=>{
    const filtered=collection.filter(x=>{
@@ -1175,7 +1176,7 @@ function App(){
    return [...filtered].sort((a,b)=>Number(a.dex)-Number(b.dex));
  },[collection,search,type,gen,shiny]);
 
- const withNav=(node)=><><div className={`appShell ${screen==='battle'?'battleShell':''}`}>{node}</div><AppNav screen={screen} onBattle={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setScreen('battle')}} onPokemon={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setOpenTeamId(null);setScreen('pc')}} onExtras={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setScreen('database')}}/></>;
+ const withNav=(node)=><div className={`appShell ${screen==='battle'?'battleShell':''}`}>{node}<AppNav screen={screen} onBattle={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setScreen('battle')}} onPokemon={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setOpenTeamId(null);setScreen('pc')}} onExtras={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setScreen('database')}}/></div>;
 
  if(screen==='database')return withNav(<DatabasePage onPokedex={()=>setScreen('pokedex')} onFrontierSets={()=>setScreen('frontier-sets')} onTrainers={()=>setScreen('trainers')} onTopStreaks={()=>setScreen('top-streaks')} onExportBackup={exportBackup} onImportBackup={importBackup} importRef={importRef} backupMessage={backupMessage}/>);
  if(screen==='top-streaks')return withNav(<TopStreaksPage collection={collection} topStreaks={topStreaks} setTopStreaks={setTopStreaks}/>);
