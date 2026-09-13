@@ -1175,7 +1175,7 @@ function App(){
    return [...filtered].sort((a,b)=>Number(a.dex)-Number(b.dex));
  },[collection,search,type,gen,shiny]);
 
- const withNav=(node)=><div className={`appShell ${screen==='battle'?'battleShell':''}`}>{node}<AppNav screen={screen} onBattle={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setScreen('battle')}} onPokemon={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setOpenTeamId(null);setScreen('pc')}} onExtras={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setScreen('database')}}/></div>;
+ const withNav=(node)=><><div className={`appShell ${screen==='battle'?'battleShell':''}`}>{node}</div><AppNav screen={screen} onBattle={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setScreen('battle')}} onPokemon={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setOpenTeamId(null);setScreen('pc')}} onExtras={()=>{setShowTeamsModal(false);setSelected(null);setCreating(false);setEditing(null);setScreen('database')}}/></>;
 
  if(screen==='database')return withNav(<DatabasePage onPokedex={()=>setScreen('pokedex')} onFrontierSets={()=>setScreen('frontier-sets')} onTrainers={()=>setScreen('trainers')} onTopStreaks={()=>setScreen('top-streaks')} onExportBackup={exportBackup} onImportBackup={importBackup} importRef={importRef} backupMessage={backupMessage}/>);
  if(screen==='top-streaks')return withNav(<TopStreaksPage collection={collection} topStreaks={topStreaks} setTopStreaks={setTopStreaks}/>);

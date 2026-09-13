@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'battle-frontier-';
-const CACHE_NAME = `${CACHE_PREFIX}v1.36.0`;
+const CACHE_NAME = `${CACHE_PREFIX}v1.37.0`;
 const ROOT = new URL('./', self.location.href);
 
 const coreUrls = [
