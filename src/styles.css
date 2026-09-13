@@ -7940,3 +7940,56 @@ input[placeholder^="Search"]{
     background:#080e18!important;
   }
 }
+
+/* v1.34 — iPhone bottom navigation anchored to viewport ------------------
+   Keep the three main navigation buttons physically attached to the bottom
+   of the installed PWA viewport. Do not reserve the iOS bottom safe-area as
+   empty space below the buttons; the nav is independent of Battle content. */
+@media (display-mode:standalone) and (max-width:520px) and (hover:none) and (pointer:coarse){
+  .appShell,
+  .appShell.battleShell{
+    padding-bottom:46px!important;
+  }
+
+  .appBottomNav{
+    position:fixed!important;
+    inset:auto 0 0 0!important;
+    top:auto!important;
+    bottom:0!important;
+    left:0!important;
+    right:0!important;
+    width:100vw!important;
+    height:46px!important;
+    min-height:46px!important;
+    max-height:46px!important;
+    margin:0!important;
+    padding:3px 5px 3px!important;
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    align-items:stretch!important;
+    gap:4px!important;
+    box-sizing:border-box!important;
+    z-index:2147483000!important;
+    background:#080e18!important;
+    transform:translateZ(0)!important;
+    -webkit-transform:translateZ(0)!important;
+  }
+
+  .appBottomNav button{
+    width:100%!important;
+    height:40px!important;
+    min-height:40px!important;
+    max-height:40px!important;
+    margin:0!important;
+    padding:2px 4px!important;
+    align-self:end!important;
+  }
+
+  /* Battle content ends at the fixed nav instead of determining nav position. */
+  .battleShell .battlePage{
+    height:100%!important;
+    max-height:100%!important;
+    min-height:0!important;
+    overflow:hidden!important;
+  }
+}
