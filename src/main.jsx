@@ -1165,36 +1165,6 @@ function App(){
  useEffect(()=>{try{localStorage.setItem(TEAMS_STORAGE_KEY,JSON.stringify(teams));}catch(e){console.warn('Could not save teams',e)}},[teams]);
  useEffect(()=>{try{localStorage.setItem(STREAKS_STORAGE_KEY,JSON.stringify(topStreaks));}catch(e){console.warn('Could not save top streaks',e)}},[topStreaks]);
 
- // Installed iPhone PWAs can report a shorter dynamic viewport on first paint,
- // then expand it after the page reflows. Pin the app to the physical standalone
- // screen height so the bottom navigation starts at the bottom and never moves.
- useEffect(()=>{
-   const standalone=window.matchMedia?.('(display-mode: standalone)')?.matches;
-   const coarse=window.matchMedia?.('(pointer: coarse)')?.matches;
-   if(!standalone||!coarse)return;
-   const syncStandaloneHeight=()=>{
-     const portrait=window.innerHeight>=window.innerWidth;
-     const screenExtent=portrait?window.screen.height:window.screen.width;
-     const fullHeight=Math.max(window.innerHeight||0,document.documentElement.clientHeight||0,screenExtent||0);
-     if(fullHeight)document.documentElement.style.setProperty('--standalone-phone-height',`${Math.round(fullHeight)}px`);
-   };
-   syncStandaloneHeight();
-   requestAnimationFrame(syncStandaloneHeight);
-   const t1=setTimeout(syncStandaloneHeight,120);
-   const t2=setTimeout(syncStandaloneHeight,600);
-   window.addEventListener('resize',syncStandaloneHeight);
-   window.addEventListener('orientationchange',syncStandaloneHeight);
-   window.addEventListener('pageshow',syncStandaloneHeight);
-   document.addEventListener('visibilitychange',syncStandaloneHeight);
-   return ()=>{
-     clearTimeout(t1);clearTimeout(t2);
-     window.removeEventListener('resize',syncStandaloneHeight);
-     window.removeEventListener('orientationchange',syncStandaloneHeight);
-     window.removeEventListener('pageshow',syncStandaloneHeight);
-     document.removeEventListener('visibilitychange',syncStandaloneHeight);
-   };
- },[]);
-
  const types=[...new Set(pokemon.flatMap(p=>[p['Type 1'],p['Type 2']]).filter(validValue))].sort();
  const list=useMemo(()=>{
    const filtered=collection.filter(x=>{
