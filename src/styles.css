@@ -7781,3 +7781,85 @@ input[placeholder^="Search"]{
   }
   .battleShell{height:100dvh!important;max-height:100dvh!important}
 }
+
+
+/* v1.32 — installed iPhone viewport + focus zoom fix ---------------------
+   The standalone PWA should use the full screen between the iOS status bar
+   and home indicator. Keep the nav background flush to the bottom, pull the
+   Battle toolbar closer to the status bar, and prevent iOS from auto-zooming
+   focused Battle search fields by keeping their computed font size >=16px. */
+@media (display-mode:standalone) and (max-width:520px) and (hover:none) and (pointer:coarse){
+  html,body,#root{height:100dvh!important;min-height:100dvh!important;overflow:hidden!important}
+
+  /* iOS already supplies the status information; use only the safe-area
+     amount needed to keep controls clear of it, with almost no extra gap. */
+  .appShell{
+    height:100dvh!important;
+    min-height:100dvh!important;
+    padding-top:max(0px,calc(env(safe-area-inset-top) - 4px))!important;
+    padding-bottom:calc(46px + env(safe-area-inset-bottom))!important;
+    overflow:hidden!important;
+  }
+  .appShell.battleShell{
+    height:100dvh!important;
+    min-height:100dvh!important;
+    padding-top:max(0px,calc(env(safe-area-inset-top) - 4px))!important;
+    padding-bottom:calc(46px + env(safe-area-inset-bottom))!important;
+    overflow:hidden!important;
+  }
+  .battleShell .battlePage{
+    height:100%!important;
+    min-height:0!important;
+    max-height:100%!important;
+    padding:1px 4px 2px!important;
+    gap:3px!important;
+    overflow:hidden!important;
+  }
+  .battleShell .battleToolbar{
+    margin:0!important;
+    padding-top:1px!important;
+  }
+
+  /* Let the nav itself reach the physical bottom of the display. The button
+     row remains above the home indicator via padding instead of floating the
+     entire navigation bar upward. */
+  .appBottomNav{
+    bottom:0!important;
+    left:0!important;
+    right:0!important;
+    height:calc(46px + env(safe-area-inset-bottom))!important;
+    min-height:calc(46px + env(safe-area-inset-bottom))!important;
+    padding:3px max(5px,env(safe-area-inset-right)) max(2px,env(safe-area-inset-bottom)) max(5px,env(safe-area-inset-left))!important;
+    align-items:start!important;
+    box-sizing:border-box!important;
+  }
+  .appBottomNav button{
+    height:39px!important;
+    min-height:39px!important;
+    padding-top:2px!important;
+    padding-bottom:2px!important;
+  }
+
+  /* iOS Safari/PWA auto-zooms text fields whose computed font size is below
+     16px. Keep only the Battle text-entry fields at 16px; their compact box
+     geometry stays the same. */
+  .compactTrainerInputWrap input,
+  .slotPokemonPicker>label input,
+  .manualPokemonPicker>label input,
+  .opponentFinderPermanent input,
+  .trainerAutocomplete input{
+    font-size:16px!important;
+    line-height:1!important;
+    -webkit-text-size-adjust:100%!important;
+    touch-action:manipulation!important;
+  }
+
+  /* The text can be 16px without making the compact search bars taller. */
+  .compactTrainerInputWrap input,
+  .slotPokemonPicker>label input{
+    min-height:27px!important;
+    height:27px!important;
+    padding-top:2px!important;
+    padding-bottom:2px!important;
+  }
+}
